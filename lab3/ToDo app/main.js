@@ -1,5 +1,5 @@
 
-var myNodelist = document.getElementsByTagName("LI");
+let myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
     var span = document.createElement("SPAN");
@@ -10,7 +10,7 @@ for (i = 0; i < myNodelist.length; i++) {
 }
 
 
-var close = document.getElementsByClassName("close");
+let close = document.getElementsByClassName("close");
 var i;
 for (i = 0; i < close.length; i++) {
     close[i].onclick = function() {
@@ -20,12 +20,13 @@ for (i = 0; i < close.length; i++) {
 }
 
 
-var list = document.querySelector('ul');
+let list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
     if (ev.target.tagName === 'LI') {
         ev.target.classList.toggle('checked');
     }
 }, false);
+
 
 function newElement() {
     var li = document.createElement("li");
