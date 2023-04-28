@@ -1,0 +1,105 @@
+<header id="header">
+  <div class="header">
+    <div class="header-wrapper">
+      <div class="header__logo">
+        <a href="/">
+          <p class="header__logo__txt">NurExpress</p>
+        </a>
+      </div>
+      <nav class="header__nav">
+        <li>
+          <div class="header__nav-link">
+            Клиентам
+          </div>
+          <div class="header__nav-overflow">
+            <div class="header__nav-wrapper" id="clients">
+              <div class=header__nav-list-group>
+                <div class="header__nav-list-title">Продукты NurExpress</div>
+                <a href="/gold" class="header__nav-list-item">NurExpress Card</a>
+                <a href="/goldkid" class="header__nav-list-item">NurExpress Card для ребенка</a>
+                <a href="/kaspired" class="header__nav-list-item">NurExpress Credit</a>
+                <a href="/deposit" class="header__nav-list-item">NurExpress Депозит</a>
+                <a href="/purchase" class="header__nav-list-item">Кредит на Покупки</a>
+                <a href="/cashkreditbiz" class="header__nav-list-item">Кредит для ИП</a>
+                <!--- <a href="/" class="header__nav-list-item">Кредит на Новое Авто</a> -->
+                <a href="/cashkredit" class="header__nav-list-item">Кредит Наличными</a>
+              </div>
+              <div class=header__nav-list-group>
+                <div class="header__nav-list-title">Сервисы NurExpress</div>
+                <a href="/shop" class="header__nav-list-item">Магазин</a>
+                <a href="/kaspitravel" class="header__nav-list-item">Travel</a>
+                <a href="/payments" class="header__nav-list-item">Платежи</a>
+                <a class="invoke-mybank header__nav-list-item">Мой банк</a>
+                <a href="/transfers" class="header__nav-list-item">Переводы</a>
+                <a class="header__nav-list-item invoke-actions">Акции</a>
+                <a class="invoke-gos header__nav-list-item">Госуслуги</a>
+                <a class="invoke-ads header__nav-list-item">Объявления
+                </a>
+                <a href="https://guide.kaspi.kz/client/ru" class="header__nav-list-item">NurExpress Гид</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="header__nav-link">
+            Бизнесу
+          </div>
+          <div class="header__nav-overflow">
+            <div class="header__nav-wrapper" id="partners">
+              <div class=header__nav-list-group>
+                <a href="/kaspipay" class="header__nav-list-item">NurExpress Pay</a>
+                <a href="/bizkredit" class="header__nav-list-item">Бизнес Кредит</a>
+                <a href="/cashkreditbiz" class="header__nav-list-item">Кредит для ИП</a>
+              </div>
+              <div class=header__nav-list-group>
+                <a href="/shop/merchant/registration/#!/landing" class="header__nav-list-item">Продавать
+                  в Интернет-магазине <br> на NurExpress.kz</a>
+                <a href="/webpay/partnership" class="header__nav-list-item">Принимать платежи с
+                  NurExpress.kz</a>
+                <a href="https://guide.kaspi.kz/partner/ru" class="header__nav-list-item">NurExpress Гид</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="header__nav-link">
+            NurExpress Гид
+          </div>
+          <div class="header__nav-overflow">
+            <div class="header__nav-wrapper" id="guide">
+              <div class=header__nav-list-group>
+                <a href="https://guide.kaspi.kz/client/ru" class="header__nav-list-item">Клиентам</a>
+                <a href="https://guide.kaspi.kz/partner/ru" class="header__nav-list-item">Бизнесу</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="header__nav-link">
+            Категории продуктов
+          </div>
+          <div class="header__nav-overflow">
+            <div class="header__nav-wrapper" id="guide">
+              <div class=header__nav-list-group>
+                <a (click)="goToCategories()" class="header__nav-list-item">Категории</a>
+                <a (click)="goToProducts()" class="header__nav-list-item">Продукты</a>
+
+              </div>
+            </div>
+          </div>
+        </li>
+      </nav>
+      <div class="lang-switcher">
+        <div (click)="goToCorzina()" class="lang-switcher__item" data-lang="ru-RU">
+          Корзина
+        </div>
+        <div *ngIf="!authService.isLoggedIn" class="lang-switcher__item" (click)="login()">
+          Войти
+        </div>
+        <div *ngIf="authService.isLoggedIn" class="lang-switcher__item" (click)="logout()">
+          Выйти
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
